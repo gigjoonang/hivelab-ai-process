@@ -165,12 +165,12 @@ pre code{background:none;padding:0;font-size:inherit}
 .ck input:checked + span{color:var(--faint);text-decoration:line-through}
 
 /* ── matrix ── */
-.mx{display:grid;grid-template-columns:78px 1fr 1fr;gap:8px;margin-top:22px}
+.mx{display:grid;grid-template-columns:112px 1fr 1fr;gap:8px;margin-top:22px}
 .mx > div{padding:13px 14px;border-radius:8px;font-size:13px}
 .mx .hd{font-family:var(--mono);font-size:11px;font-weight:600;letter-spacing:.06em;
   color:var(--muted);background:none;padding:6px 14px;display:flex;align-items:flex-end}
-.mx .rw{font-family:var(--mono);font-size:12px;font-weight:600;color:var(--accent-ink);
-  background:none;display:flex;align-items:center;padding:13px 0 13px 2px}
+.mx .rw{font-family:var(--mono);font-size:12px;font-weight:600;color:var(--accent);background:none;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;padding:13px 6px 13px 2px;line-height:1.3}
+.mx .rw em{font-style:normal;font-family:var(--sans);font-size:11px;font-weight:400;color:var(--faint);margin-top:4px;letter-spacing:0}
 .mx .cl{background:var(--surface);border:1px solid var(--line);color:var(--ink-2)}
 .mx .cl b{display:block;font-family:var(--mono);font-size:15px;color:var(--ink);font-weight:600}
 .mx .cl em{display:block;font-style:normal;font-size:12px;color:var(--muted);margin-top:4px;line-height:1.5}
@@ -196,7 +196,7 @@ pre code{background:none;padding:0;font-size:inherit}
   .map{grid-template-columns:1fr}
   .mx{grid-template-columns:1fr}
   .mx .hd{display:none}
-  .mx .rw{padding:14px 0 2px}
+  .mx .rw{padding:14px 0 2px;flex-direction:row;align-items:baseline;gap:8px}
   h1{font-size:29px}
 }
 
@@ -820,10 +820,10 @@ OG 이미지     1200×630        파비콘  SVG + 32×32 + 180×180
     </div>
     <h4>하는 일</h4>
     <ol>
-      <li>브랜드 단서를 뽑고 <strong>톤 형용사 세 개</strong>를 정합니다. 이게 이종 업계 검색의 열쇠예요.</li>
+      <li>브랜드 단서를 뽑고 <strong>분위기 형용사 세 개</strong>를 정합니다. 이게 다른 업계 검색의 열쇠예요.</li>
       <li>NDA가 없으면 고객사 현재 사이트랑 경쟁사 팔레트를 실제로 확인합니다. 업계에 이미 있는 톤이랑 아직 없는 톤을 구분하려고요. 확인한 것과 새로 제안하는 것은 구분해서 표시합니다.</li>
-      <li>6칸 매트릭스를 채웁니다. 정석·변주·파격 × 동종·이종, 총 15장. <strong>이종 칸을 비우지 않아요.</strong> 동종만 보면 결국 업계 평균이 나옵니다.</li>
-      <li>이종은 업계명으로 안 나오니까 톤 형용사를 디자인 언어로 바꿔서 찾습니다. "신뢰감 있는" → "여백이 크고 대비가 낮은".</li>
+      <li>여섯 칸을 채웁니다. 정석·변주·파격 × 같은 업계·다른 업계, 총 15장. <strong>다른 업계 칸을 비우지 않아요.</strong> 같은 업계만 보면 결국 업계 평균이 나옵니다.</li>
+      <li>다른 업계는 업계 이름으로 안 나오니까 분위기 형용사를 디자인 언어로 바꿔서 찾습니다. "신뢰감 있는" → "여백이 크고 대비가 낮은".</li>
       <li><strong>URL을 전부 직접 열어서 확인합니다.</strong> 안 열리면 그 장은 버려요. 장마다 왜 맞는지, 가져올 것, 버릴 것을 붙이고 셋 중 하나라도 못 쓰면 역시 버립니다.</li>
       <li>출처 비율을 계산해서 적습니다. 실제 운영 사이트 60% 이상, 컨셉 샷 30% 이하.</li>
       <li>갤러리 HTML을 만듭니다. 이미지를 다운로드해서 <strong>base64로 직접 넣어요.</strong> 외부 URL로 걸어두면 나중에 열었을 때 깨집니다. 만든 뒤 파일이 실제로 생겼는지 확인하고 절대경로를 알려줍니다.</li>
@@ -1009,81 +1009,100 @@ OG 이미지     1200×630        파비콘  SVG + 32×32 + 180×180
   <h1>레퍼런스 규칙</h1>
   <p class="lede">많이 모으는 게 목적이 아닙니다. 이 프로젝트에 왜 맞는지 설명할 수 있는 것만 모읍니다. 근거를 못 대는 레퍼런스는 회의 시간만 늘려요. 그런 건 한 장도 넣지 마세요.</p>
 
-  <h2>6칸 매트릭스</h2>
-  <p>프로젝트마다 이 여섯 칸을 채웁니다. 칸을 비우지도, 늘리지도 않아요. 총 15장입니다. 최소 12장, 최대 18장. 더 늘리면 고르는 시간만 길어집니다.</p>
+  <h2>레퍼런스 15장, 이렇게 나눠 모읍니다</h2>
+  <p>두 가지 기준을 섞어서 여섯 칸을 만듭니다.</p>
+  <ul>
+    <li><strong>얼마나 과감한가</strong> — 정석 / 변주 / 파격, 세 단계</li>
+    <li><strong>어디서 가져왔나</strong> — 같은 업계 / 다른 업계, 두 곳</li>
+  </ul>
   <div class="mx">
-    <div class="hd"></div><div class="hd">동종 업계</div><div class="hd">이종 업계</div>
-    <div class="rw">정석</div><div class="cl"><b>3장</b><em>업계 문법 안에서 완성도로 승부</em></div><div class="cl"><b>2장</b><em>다른 업계의 안정적인 문법</em></div>
-    <div class="rw">변주</div><div class="cl"><b>3장</b><em>구조는 익숙, 한 요소가 확 튐</em></div><div class="cl"><b>2장</b><em>다른 업계에서 빌려온 처리</em></div>
-    <div class="rw">파격</div><div class="cl"><b>3장</b><em>업계에서 아무도 안 쓰는 문법</em></div><div class="cl"><b>2장</b><em>업종을 못 맞힐 정도의 전환</em></div>
+    <div class="hd"></div><div class="hd">같은 업계에서</div><div class="hd">다른 업계에서</div>
+    <div class="rw">정석<em>무난하게</em></div>
+      <div class="cl"><b>3장</b><em>업계에서 다들 쓰는 방식 안에서 완성도로 승부</em></div>
+      <div class="cl"><b>2장</b><em>다른 업계의 무난하고 탄탄한 구성</em></div>
+    <div class="rw">변주<em>한 군데만 비틀어서</em></div>
+      <div class="cl"><b>3장</b><em>구조는 익숙한데 한 군데가 확 튐</em></div>
+      <div class="cl"><b>2장</b><em>다른 업계에서 빌려온 처리 한 가지</em></div>
+    <div class="rw">파격<em>확 다르게</em></div>
+      <div class="cl"><b>3장</b><em>그 업계에서 아무도 안 쓰는 방식</em></div>
+      <div class="cl"><b>2장</b><em>업종을 못 맞힐 정도로 다른 세계</em></div>
   </div>
+  <p>총 15장입니다. 최소 12장, 최대 18장. 더 늘리면 고르는 시간만 길어집니다. <strong>여섯 칸 중 하나라도 비우지 마세요.</strong></p>
 
-  <h2>세로축 — 얼마나 대담한가</h2>
-  <div class="tblwrap"><table>
-    <tr><th>등급</th><th>어떻게 판별하나</th><th>왜 필요한가</th></tr>
-    <tr><td class="k">정석</td><td>같은 업계 상위 사이트랑 나란히 놔도 어색하지 않음</td><td>승인이 빠르고 리스크가 적음</td></tr>
-    <tr><td class="k">변주</td><td>구조는 익숙한데 타이포·컬러·모션 중 하나가 확 튐</td><td>차별화랑 안전이 겹치는 자리. 실무에서 제일 많이 채택됨</td></tr>
-    <tr><td class="k">파격</td><td>업계 모르는 사람한테 보여주면 무슨 업종인지 못 맞힘</td><td>고객 기대치를 다시 세팅함. 떨어져도 나머지 두 안이 좋아 보임</td></tr>
-  </table></div>
+  <h2>얼마나 과감한가 — 세 단계</h2>
+  <h3>정석 · 무난하게</h3>
+  <p class="tight">업계에서 다들 쓰는 방식 안에서 완성도로 승부하는 안입니다. <strong>같은 업계 상위 사이트와 나란히 놔도 어색하지 않으면 정석입니다.</strong> 승인이 빠르고 리스크가 적습니다.</p>
+  <h3>변주 · 한 군데만 비틀어서</h3>
+  <p class="tight">전체 구조는 익숙하게 두고 한 가지 요소만 크게 바꾸는 안입니다. 글꼴이든 컬러든 모션이든 하나만요. <strong>구조는 익숙한데 어느 한 군데가 확 튀면 변주입니다.</strong> 차별화와 안전이 겹치는 자리라 실무에서 제일 많이 채택됩니다.</p>
+  <h3>파격 · 확 다르게</h3>
+  <p class="tight">그 업계에서 아무도 안 쓰는 방식을 가져오는 안입니다. <strong>업계를 모르는 사람에게 보여줬을 때 무슨 업종인지 못 맞히면 파격입니다.</strong> 고객의 기대치를 다시 세팅하는 역할을 합니다. 떨어지더라도 나머지 두 안이 상대적으로 좋아 보이게 만듭니다.</p>
+  <div class="note"><p>세 단계를 A·B·C로 부르지 마세요. A급 시안 / B급 시안과 헷갈려서 회의에서 한 번은 꼭 엉킵니다.</p></div>
 
-  <h2>이종 업계 칸을 비우지 마세요</h2>
-  <p>동종만 보면 결국 업계 평균이 나옵니다. 여기가 "생각 못 해봤던 방향"이 나오는 자리예요. 금융 서비스에 스포츠 브랜드의 에너지를, B2B SaaS에 매거진의 타이포 위계를 가져오는 식으로 디자인 처리만 빌려옵니다.</p>
-  <h3>이종은 업계명으로 검색하면 안 나옵니다</h3>
+  <h2>어디서 가져오나 — 두 곳</h2>
+  <h3>같은 업계에서</h3>
+  <p class="tight">고객사와 같은 산업군의 사이트입니다. "이 업계에서 이미 이렇게 하고 있다"는 근거가 되기 때문에 고객 설득에 바로 씁니다.</p>
+  <h3>다른 업계에서</h3>
+  <p class="tight">전혀 상관없는 산업군에서 <strong>디자인 처리만</strong> 빌려옵니다. 업종을 따라오는 게 아니라 만듦새를 따라오는 겁니다.</p>
+  <p class="tight">금융 서비스인데 스포츠 브랜드의 에너지를 가져온다든가, B2B 소프트웨어인데 잡지의 제목 크기 대비를 가져온다든가 하는 식입니다.</p>
+  <div class="note warn"><p><strong>이 칸을 비우지 마세요.</strong> 같은 업계만 들여다보면 결국 그 업계 평균이 나옵니다. "이런 것도 되는구나" 싶은 방향은 전부 이 칸에서 나옵니다.</p></div>
+  <h3>다른 업계는 이렇게 찾습니다</h3>
+  <p class="tight">업계 이름으로 검색하면 당연히 같은 업계만 나옵니다. <strong>업계를 빼고 형용사로 찾으세요.</strong></p>
   <ol>
-    <li>기획서에서 톤 형용사 세 개를 뽑습니다. 신뢰감 있는 / 빠른 / 전문적인</li>
-    <li>그걸 디자인 언어로 바꿉니다. 신뢰감 → 여백이 크고 대비가 낮은 / 빠른 → 정보 밀도가 높고 모션이 짧은</li>
-    <li>업계를 빼고 그 언어로만 검색합니다</li>
+    <li>기획서에서 분위기를 나타내는 형용사 세 개를 뽑습니다 — 신뢰감 있는 / 빠른 / 전문적인</li>
+    <li>그 형용사를 눈에 보이는 특징으로 바꿉니다 — 신뢰감 있는 → 여백이 크고 대비가 낮은, 빠른 → 정보가 빽빽하고 모션이 짧은</li>
+    <li>업계 이름은 빼고 그 특징으로만 검색합니다</li>
   </ol>
   <pre><code>minimal high-contrast editorial layout
 dense data-first interface design
 oversized typography landing page</code></pre>
 
-  <h2>어디서 가져오나</h2>
+  <h2>어떤 사이트에서 찾나</h2>
   <div class="tblwrap"><table>
-    <tr><th>순위</th><th>출처</th><th>비율</th><th>용도</th></tr>
-    <tr><td class="k">1</td><td>실제 운영 중인 사이트<br>경쟁사 실사이트 · Awwwards · Land-book · SiteInspire · Godly · Mobbin</td><td class="k">60%↑</td><td>전부. 특히 레이아웃이랑 정보 구조 근거</td></tr>
-    <tr><td class="k">2</td><td>컨셉 샷<br>Dribbble · Behance · Pinterest</td><td class="k">30%↓</td><td>표면 처리 아이디어만. 레이아웃 근거로는 안 씀</td></tr>
-    <tr><td class="k">3</td><td>업계 밖 시각 자료<br>에디토리얼 · 패키지 · 공간 · 모션</td><td class="k">10%↓</td><td>이종 업계 파격 칸에서만</td></tr>
+    <tr><th>순위</th><th>어디</th><th>비율</th><th>무엇에 쓰나</th></tr>
+    <tr><td class="k">1</td><td><strong>실제로 운영 중인 사이트</strong><br>경쟁사 실사이트 · Awwwards · Land-book · SiteInspire · Godly · Mobbin</td><td class="k">60%↑</td><td>전부. 특히 레이아웃과 정보 구조의 근거</td></tr>
+    <tr><td class="k">2</td><td>만들어만 본 컨셉 이미지<br>Dribbble · Behance · Pinterest</td><td class="k">30%↓</td><td>겉모습 아이디어만. 레이아웃 근거로는 쓰지 않음</td></tr>
+    <tr><td class="k">3</td><td>웹이 아닌 시각 자료<br>잡지 편집 · 패키지 · 공간 · 모션</td><td class="k">10%↓</td><td>다른 업계 × 파격 칸에서만</td></tr>
   </table></div>
   <div class="note">
-    <div class="note-t">왜 컨셉 샷을 제한하나</div>
-    <p>이 플랫폼 샷 중에 실제로 구현된 건 얼마 안 됩니다. 텍스트 세 줄, 카드 네 장 기준으로 예쁘게 짜여 있는데 진짜 콘텐츠가 들어가면 무너져요. 이걸 레이아웃 근거로 쓰면 예쁘긴 한데 실무에서 못 쓰는 시안이 나옵니다.</p>
-    <p>레이아웃이나 정보 밀도, 내비게이션은 실제 콘텐츠가 들어갔을 때 안 무너지느냐가 전부고, 그건 운영 중인 사이트만 증명해 줍니다.</p>
+    <div class="note-t">왜 컨셉 이미지를 제한하나</div>
+    <p>Dribbble이나 Behance에 올라온 이미지 상당수는 <strong>실제로 만들어진 적이 없습니다.</strong> 텍스트 세 줄, 카드 네 장 기준으로 예쁘게 짜여 있어서 진짜 콘텐츠를 넣으면 무너져요. 이걸 레이아웃 근거로 쓰면 예쁘긴 한데 실무에서 못 쓰는 시안이 나옵니다.</p>
+    <p>레이아웃이나 정보 밀도, 메뉴 구성은 실제 콘텐츠가 들어갔을 때 안 무너지느냐가 전부이고, 그건 운영 중인 사이트만 증명해 줍니다.</p>
   </div>
-  <h3>안 쓰는 것</h3>
+  <h3>쓰지 않는 것</h3>
   <ul>
-    <li>원 출처를 못 찾는 이미지. 핀터레스트 재업로드본 같은 것</li>
-    <li>AI로 만든 목업. 실제 디자인 결정의 근거가 아님</li>
-    <li>5년 넘은 화면. 고전으로 인용하는 경우는 예외</li>
-    <li>산업군이나 규모가 두 단계 이상 차이 나는 사례</li>
+    <li>원래 어디서 나온 건지 못 찾는 이미지. 핀터레스트에 재업로드된 것 같은 경우</li>
+    <li>AI로 만든 목업. 실제 디자인 결정을 거친 물건이 아닙니다</li>
+    <li>5년 넘은 화면. 고전으로 일부러 인용하는 경우는 예외</li>
+    <li>산업군이나 회사 규모가 두 단계 이상 차이 나는 사례</li>
   </ul>
 
   <h2>한 장이 통과하려면</h2>
   <p>다섯 개를 다 만족해야 합니다. 네 개면 버립니다.</p>
   <ol>
-    <li><strong>URL이 실제로 열린다.</strong> 추측한 주소 적지 마세요. 열어보고 확인합니다.</li>
+    <li><strong>주소가 실제로 열린다.</strong> 추측해서 적지 마세요. 직접 열어보고 확인합니다.</li>
     <li><strong>이미지가 실제로 보인다.</strong> 링크만 나열하는 건 수집이 아닙니다.</li>
-    <li><strong>왜 이 프로젝트에 맞는지 한 문장으로 말할 수 있다.</strong> 기획서 어느 대목이랑 연결되는지 적습니다.</li>
+    <li><strong>왜 이 프로젝트에 맞는지 한 문장으로 말할 수 있다.</strong> 기획서의 어느 대목과 연결되는지 적습니다.</li>
     <li><strong>가져올 게 하나 특정된다.</strong> "느낌이 좋다"는 가져올 게 아니에요. "히어로에서 본문으로 넘어갈 때 여백이 몇 배로 벌어지는지" 정도는 돼야 합니다.</li>
     <li><strong>버릴 게 하나 특정된다.</strong> 통째로 좋은 레퍼런스는 없습니다.</li>
   </ol>
-  <pre><code>**[정석 · 동종] 사이트명**
-- URL: https://...  (확인일 2026-09-16)
-- 왜 맞는가: 기획서의 "신뢰감 있는 전문성" 요구랑 직결. 같은 B2B 서비스 구조.
+  <pre><code>**[정석 · 같은 업계] 사이트명**
+- 주소: https://...  (확인일 2026-09-17)
+- 왜 맞는가: 기획서의 "신뢰감 있는 전문성" 요구와 직결. 같은 B2B 서비스 구조.
 - 가져올 것: 헤더 아래 첫 화면을 카피 세 줄로만 채우는 절제
-- 버릴 것: 파란색 계열 팔레트. 경쟁사랑 겹침</code></pre>
+- 버릴 것: 파란색 계열 팔레트. 경쟁사와 겹침</code></pre>
 
-  <h2>갤러리는 이미지가 보여야 합니다</h2>
+  <h2>갤러리로 만들어 전달합니다</h2>
+  <p>수집 결과는 <strong>이미지가 눈에 보이는 형태</strong>로 넘깁니다. 링크 목록은 산출물이 아닙니다.</p>
   <ul>
     <li>파일명은 <code>reference-gallery.html</code>, 프로젝트 폴더 안에 저장</li>
-    <li>이미지는 base64 data URI로 직접 넣습니다. 외부 URL로 걸어두면 나중에 열었을 때 깨져요</li>
-    <li>6칸 구조 그대로 섹션을 나눕니다. 카드마다 이미지, 출처, 왜 맞는지, 가져올 것, 버릴 것</li>
-    <li>다운로드가 막힌 항목은 우회하지 말고 링크랑 설명으로 대체하고 그렇게 표시합니다</li>
+    <li>이미지는 다운로드해서 HTML 안에 직접 넣습니다. 외부 주소로 걸어두면 나중에 열었을 때 깨집니다</li>
+    <li>여섯 칸 구조 그대로 섹션을 나눕니다. 카드마다 이미지, 출처, 왜 맞는지, 가져올 것, 버릴 것</li>
+    <li>다운로드가 막힌 항목은 억지로 우회하지 말고 링크와 설명으로 대체하고, 갤러리에 그렇게 표시합니다</li>
   </ul>
 
-  <h2>스타일이랑 레이아웃은 따로 모읍니다</h2>
-  <p>섞으면 논의가 엉킵니다. 스타일(컬러, 타이포, 그래픽, 사진 톤)은 <code>02-design-style.md</code>로, 레이아웃(화면 구성, 존 순서, 그리드, 정보 밀도)은 <code>01-ui-structure.md</code>로 갑니다.</p>
-  <p>레이아웃도 정석·변주·파격으로 뽑습니다. 다만 레이아웃은 이종 업계 칸이 필수는 아니에요. 레이아웃 문법은 업계보다 콘텐츠 유형을 따라가거든요. 대신 콘텐츠 유형이 같은 다른 업계에서 찾습니다.</p>
+  <h2>스타일과 레이아웃은 따로 모읍니다</h2>
+  <p>섞으면 논의가 엉킵니다. <strong>스타일</strong>(컬러, 글꼴, 그래픽 처리, 사진 톤)은 <code>02-design-style.md</code>로, <strong>레이아웃</strong>(화면 구성, 섹션 순서, 그리드, 정보 밀도)은 <code>01-ui-structure.md</code>로 갑니다.</p>
+  <p>레이아웃도 정석·변주·파격 세 단계로 뽑습니다. 다만 레이아웃은 <strong>다른 업계 칸이 필수가 아닙니다.</strong> 레이아웃은 업계보다 콘텐츠 종류를 따라가거든요. 상품 목록을 다루는 화면은 업계가 달라도 구성이 비슷합니다. 그래서 업계 대신 <strong>콘텐츠 종류가 같은 곳</strong>에서 찾습니다.</p>
 </div></section>
 
 <!-- GLOSSARY -->
@@ -1096,7 +1115,7 @@ oversized typography landing page</code></pre>
     <tr><td class="k">A급 시안</td><td>고객 제안의 메인 안. 디자이너가 직접 제작</td><td>등급이 아니라 역할 구분입니다</td></tr>
     <tr><td class="k">B급 시안</td><td>비교용 대안. AI가 만들고 사람이 고르고 손봄</td><td>A급을 대충 만든 게 아닙니다</td></tr>
     <tr><td class="k">정석·변주·파격</td><td>스타일과 레이아웃이 얼마나 대담한지 세 단계</td><td>A·B·C로 부르지 않습니다</td></tr>
-    <tr><td class="k">동종 / 이종</td><td>레퍼런스 출처가 같은 업계인지 다른 업계인지</td><td></td></tr>
+    <tr><td class="k">같은 업계 / 다른 업계</td><td>레퍼런스를 어디서 가져왔는지. 여섯 칸의 가로축입니다</td><td></td></tr>
     <tr><td class="k">1-4 방향 확정</td><td>구조랑 스타일을 정하는 지점. 사람이 함</td><td>회의가 아니라 파일에 적는 행위입니다</td></tr>
     <tr><td class="k">토큰</td><td>컬러, 타이포, 간격 같은 걸 이름 붙여 정해둔 값</td><td>값만이 아니라 이름이 붙어야 토큰입니다</td></tr>
     <tr><td class="k">원시값 / 의미값</td><td><code>neutral-700</code> / <code>text-primary</code></td><td>화면에서는 의미값만 씁니다</td></tr>
