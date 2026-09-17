@@ -18,7 +18,7 @@ git이 익숙하지 않으면 저장소 페이지에서 `Code` ▸ `Download ZIP
 
 받은 폴더를 Claude Code로 열면 `CLAUDE.md`를 자동으로 읽어서 규칙이 적용되고, `.claude/skills/`의 스킬 9종이 바로 잡힙니다. 따로 설치할 건 없습니다.
 
-**Claude Code 설치부터 Figma 연결까지 처음 하는 분은 가이드 사이트의 [처음 설정하기](https://claude.ai/artifact/499qomgNqLu98Vf5DTLXsj)를 보세요.** 화면 보면서 따라 하는 게 빠릅니다.
+**처음이면 가이드 사이트의 [설치하기](https://claude.ai/artifact/499qomgNqLu98Vf5DTLXsj)부터 보세요. Figma 연결은 그 옆 페이지에 따로 있습니다.** 화면 보면서 따라 하는 게 빠릅니다.
 
 ---
 
@@ -55,7 +55,7 @@ git이 익숙하지 않으면 저장소 페이지에서 `Code` ▸ `Download ZIP
 
 ### 읽기 편한 가이드 사이트
 
-문서를 사내용 페이지로 옮겨 뒀습니다. 처음 설정하기, 워크플로우 맵, 단계별 가이드, 체크하면서 쓰는 품질 기준, 레퍼런스 규칙이 한 곳에 있습니다.
+문서를 사내용 페이지로 옮겨 뒀습니다. 설치하기, Figma 연결, 워크플로우 맵, 단계별 가이드, 체크하면서 쓰는 품질 기준, 레퍼런스 규칙이 한 곳에 있습니다.
 
 **https://claude.ai/artifact/499qomgNqLu98Vf5DTLXsj**
 
