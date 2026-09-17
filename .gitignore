@@ -1,0 +1,15 @@
+# macOS
+.DS_Store
+
+# 고객사 자료가 들어가는 곳 — 절대 올리지 않습니다
+projects/*
+!projects/.gitkeep
+
+# 내부 발표 자료
+*.pptx
+
+# 이전 세션의 디자인 캔버스 시안 (배포에 불필요)
+guide-site/design-process-guide-site.html
+guide-site/*.dc.html
+guide-site/build.mjs
+guide-site/canvas.json
