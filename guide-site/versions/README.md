@@ -6,8 +6,8 @@
 
 | 작업 파일 | 주소 | 디자인 |
 |---|---|---|
-| `../index.html` | https://claude.ai/artifact/YGcpw1HEeco9v4y4eFApUY | **v4 밝은 문서형** — IBM Plex, 밝은 회색 바탕, 마젠타 |
-| `../dark.html` | https://claude.ai/artifact/499qomgNqLu98Vf5DTLXsj | **v10 다크** — 피그마 시안 기준, 직군 검색 랜딩 + 다크 앱 + 처음 설정하기 가이드 |
+| `../index.html` | https://claude.ai/artifact/YGcpw1HEeco9v4y4eFApUY | **v4 밝은 문서형**: IBM Plex, 밝은 회색 바탕, 마젠타 |
+| `../dark.html` | https://claude.ai/artifact/499qomgNqLu98Vf5DTLXsj | **v11 다크**: 피그마 시안 기준, 직군 검색 랜딩 + 다크 앱 + 처음 설정하기 가이드 |
 
 두 주소가 따로 살아 있어서 나란히 놓고 비교할 수 있습니다.
 
@@ -22,6 +22,7 @@
 | `v8-dark-qb_2026-09-17.html` | 2026-09-17 | 품질 기준 문장 수정 | 체크리스트 40개를 능동·긍정문으로 재작성. 밝은 버전에도 같이 반영 |
 | `v9-dark-ref_2026-09-17.html` | 2026-09-17 | 레퍼런스 규칙 문장 수정 | 동종/이종을 같은 업계/다른 업계로 바꾸고 전체를 설명문으로 재작성 |
 | `v10-dark-titles_2026-09-17.html` | 2026-09-17 | 제목 말투 통일 | 모든 제목을 명사형으로 맞추고 제목 속 긴 대시를 콜론으로 교체 |
+| `v11-dark-colon_2026-09-17.html` | 2026-09-17 | 긴 대시 전면 교체 | 본문까지 포함해 긴 대시 185건을 전부 콜론으로 교체 |
 
 **두 버전의 본문 글자는 같습니다.** 디자인과, 다크 버전에만 있는 INSTALL 두 페이지가 다릅니다.
 

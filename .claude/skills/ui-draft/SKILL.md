@@ -13,10 +13,10 @@ description: 확정된 구조·스타일·토큰으로 디자인 컨셉을 정�
 
 ## 시작 전에
 
-1. **방향 확정** — `01-ui-structure.md`, `02-design-style.md`의 확정 표가 채워져 있나. 비었으면 멈춘다.
-2. **토큰** — `03-design-tokens.md`가 채워져 있나. 비었으면 `ui-tokens`를 먼저 부른다.
-3. **스크린샷** — HTML을 PNG로 캡처할 수 있나. 헤드리스 브라우저가 있는지, Bash로 설치할 수 있는지, 아니면 이 세션의 브라우저 도구를 쓸 수 있는지 확인한다.
-4. **Figma 연결** — `mcp__TalkToFigma__*` 툴을 지금 쓸 수 있나. 없으면 안내한다.
+1. **방향 확정**: `01-ui-structure.md`, `02-design-style.md`의 확정 표가 채워져 있나. 비었으면 멈춘다.
+2. **토큰**: `03-design-tokens.md`가 채워져 있나. 비었으면 `ui-tokens`를 먼저 부른다.
+3. **스크린샷**: HTML을 PNG로 캡처할 수 있나. 헤드리스 브라우저가 있는지, Bash로 설치할 수 있는지, 아니면 이 세션의 브라우저 도구를 쓸 수 있는지 확인한다.
+4. **Figma 연결**: `mcp__TalkToFigma__*` 툴을 지금 쓸 수 있나. 없으면 안내한다.
    > "Figma에서 대상 파일을 열고 TalkToFigma 플러그인을 실행한 다음, 화면에 뜨는 채널 이름을 알려주세요."
    채널 이름을 받으면 `join_channel`로 접속한다.
    Figma Dev Mode MCP 툴이 따로 있으면 그건 읽기 전용이다. 기존 시스템 참고에만 쓰고 생성이나 수정은 전부 TalkToFigma로 한다.
